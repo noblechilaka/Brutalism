@@ -1,0 +1,111 @@
+[
+  {
+    "id": "01",
+    "title": "THE CONCRETE VILLA",
+    "category": "Residential",
+    "year": "2025",
+    "location": "Oslo, Norway",
+    "heroImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+    "tags": ["Minimalism", "Raw Material", "Eco-Glass"]
+  },
+  {
+    "id": "02",
+    "title": "NORDIC OFFICE HUB",
+    "category": "Commercial",
+    "year": "2024",
+    "location": "Berlin, Germany",
+    "heroImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    "tags": ["Acoustic", "Workspace", "Modern"]
+  },
+  {
+    "id": "03",
+    "title": "THE BRUTALIST LOFT",
+    "category": "Residential",
+    "year": "2024",
+    "location": "London, UK",
+    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    "tags": ["Brutalism", "Industrial", "Renovation"]
+  },
+  {
+    "id": "04",
+    "title": "CULTURAL PAVILION",
+    "category": "Cultural",
+    "year": "2024",
+    "location": "Reykjavik, Iceland",
+    "heroImage": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+    "tags": ["Public", "Art", "Sustainable"]
+  },
+  {
+    "id": "05",
+    "title": "THE GLASS HOUSE",
+    "category": "Residential",
+    "year": "2023",
+    "location": "Copenhagen, Denmark",
+    "heroImage": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80",
+    "tags": ["Transparency", "Nature", "Scandinavian"]
+  },
+  {
+    "id": "06",
+    "title": "URBAN COMPLEX",
+    "category": "Mixed-Use",
+    "year": "2023",
+    "location": "Stockholm, Sweden",
+    "heroImage": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80",
+    "tags": ["Urban", "Multi-unit", "Green"]
+  },
+  {
+    "id": "07",
+    "title": "THE LIBRARY",
+    "category": "Cultural",
+    "year": "2023",
+    "location": "Helsinki, Finland",
+    "heroImage": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80",
+    "tags": ["Public", "Education", "Wood"]
+  },
+  {
+    "id": "08",
+    "title": "MEDIAWORKS HQ",
+    "category": "Commercial",
+    "year": "2022",
+    "location": "Amsterdam, Netherlands",
+    "heroImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "tags": ["Broadcasting", "Open Plan", "Creative"]
+  },
+  {
+    "id": "09",
+    "title": "WATERFRONT APARTMENTS",
+    "category": "Residential",
+    "year": "2022",
+    "location": "Hamburg, Germany",
+    "heroImage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+    "tags": ["Waterfront", "Luxury", "Modern"]
+  },
+  {
+    "id": "10",
+    "title": "THE ATRIUM",
+    "category": "Commercial",
+    "year": "2022",
+    "location": "Vienna, Austria",
+    "heroImage": "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&q=80",
+    "tags": ["Office", "Central", "Light"]
+  },
+  {
+    "id": "11",
+    "title": "MOUNTAIN RETREAT",
+    "category": "Residential",
+    "year": "2021",
+    "location": "Zurich, Switzerland",
+    "heroImage": "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&q=80",
+    "tags": ["Alpine", "Wood", "Peaceful"]
+  },
+  {
+    "id": "12",
+    "title": "CITY MUSEUM",
+    "category": "Cultural",
+    "year": "2021",
+    "location": "Paris, France",
+    "heroImage": "https://images.unsplash.com/photo-1470723710355-95304d8aece4?w=800&q=80",
+    "tags": ["Heritage", "Modern", "Exhibition"]
+  }
+]
+

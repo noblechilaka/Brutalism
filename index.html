@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNFORM | Architectural Studio</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-headline: "Space Grotesk", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        --font-functional: "IBM Plex Mono", "Courier New", monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cursor Crosshair -->
+    <div class="crosshair crosshair-h"></div>
+    <div class="crosshair crosshair-v"></div>
+
+    <!-- Right Margin: Chapter Name -->
+    <div class="chapter-marker">
+      <span class="chapter-label"
+        >CH. <span id="chapter-num">01</span> — HERO</span
+      >
+    </div>
+
+    <!-- Section 1: Hero Plate -->
+    <section class="hero-plate" id="hero">
+      <div class="hero-grid">
+        <div class="hero-headline-wrap">
+          <h1 class="hero-headline" data-lenis-opacity>UNFORM</h1>
+        </div>
+        <div class="hero-video-wrap">
+          <div class="hero-video" data-parallax-speed="0.15">
+            <video autoplay muted loop playsinline>
+              <source
+                src="https://videos.pexels.com/video-files/5532766/5532766-uhd_2560_1440_30fps.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="hero-superscript">
+        <span>01/ HERO</span>
+      </div>
+    </section>
+
+    <!-- Section 2: Structural Index -->
+    <section class="structural-index" id="index">
+      <div class="structural-grid">
+        <div class="structural-col" data-category="residential">
+          <div class="structural-trigger">
+            <span class="structural-num">01</span>
+            <span class="structural-label">RESIDENTIAL</span>
+            <span class="structural-sup">⁽¹²⁾</span>
+            <button class="structural-plus">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="film-strip">
+            <div class="film-strip-track">
+              <img
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=200&q=80"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="structural-col" data-category="commercial">
+          <div class="structural-trigger">
+            <span class="structural-num">02</span>
+            <span class="structural-label">COMMERCIAL</span>
+            <span class="structural-sup">⁽⁰⁹⁾</span>
+            <button class="structural-plus">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="film-strip">
+            <div class="film-strip-track">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200&q=80"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="structural-col" data-category="cultural">
+          <div class="structural-trigger">
+            <span class="structural-num">03</span>
+            <span class="structural-label">CULTURAL</span>
+            <span class="structural-sup">⁽⁰⁴⁾</span>
+            <button class="structural-plus">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="film-strip">
+            <div class="film-strip-track">
+              <img
+                src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1470723710355-95304d8aece4?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1465809873722-b4bf7208d2b1?w=200&q=80"
+                alt=""
+              />
+              <img
+                src="https://images.unsplash.com/photo-1514539079130-25950c84965d?w=200&q=80"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Featured Pair (Dynamic from JSON) -->
+    <section class="featured-pair" id="works">
+      <div class="featured-grid">
+        <!-- Project 1 (Latest) -->
+        <div class="featured-project featured-main" id="featured1">
+          <div class="featured-image">
+            <img src="" alt="" class="featured-img" />
+            <div class="featured-tags"></div>
+          </div>
+          <div class="featured-info">
+            <span class="featured-id">#01</span>
+            <h2 class="featured-title"></h2>
+            <div class="featured-meta">
+              <span class="meta-category"></span>
+              <span class="meta-year"></span>
+              <span class="meta-location"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 (Second Latest) -->
+        <div class="featured-project featured-secondary" id="featured2">
+          <div class="featured-image">
+            <img src="" alt="" class="featured-img" />
+            <div class="featured-tags"></div>
+          </div>
+          <div class="featured-info">
+            <span class="featured-id">#02</span>
+            <h2 class="featured-title"></h2>
+            <div class="featured-meta">
+              <span class="meta-category"></span>
+              <span class="meta-year"></span>
+              <span class="meta-location"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider Line -->
+      <div class="featured-divider"></div>
+
+      <!-- View More Button -->
+      <div class="view-more-section">
+        <a href="projects.html" class="view-more-btn">
+          <span class="view-more-text">EXPLORE ALL WORKS</span>
+          <span class="view-more-count" id="projectCount">⁽⁴⁸⁾</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 4: Technical Service Accordion -->
+    <section class="technical-accordion" id="services">
+      <div class="accordion-container">
+        <div class="accordion-header">
+          <span class="accordion-superscript">02</span>
+          <h2 class="accordion-title">SERVICES</h2>
+        </div>
+        <div class="accordion-list">
+          <div class="accordion-item" data-expanded="false">
+            <div class="accordion-bar">
+              <span class="accordion-num">01</span>
+              <span class="accordion-label">ARCHITECTURAL AUDIT</span>
+              <button class="accordion-plus">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-text">
+                <p>
+                  Our comprehensive architectural audit evaluates every aspect
+                  of your built environment.
+                </p>
+              </div>
+              <div class="accordion-3d">
+                <div class="wireframe-cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-expanded="false">
+            <div class="accordion-bar">
+              <span class="accordion-num">02</span>
+              <span class="accordion-label">INTERIOR FABRICATION</span>
+              <button class="accordion-plus">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-text">
+                <p>
+                  From concept to completion, our fabrication team transforms
+                  designs into tangible reality.
+                </p>
+              </div>
+              <div class="accordion-3d">
+                <div class="wireframe-cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" data-expanded="false">
+            <div class="accordion-bar">
+              <span class="accordion-num">03</span>
+              <span class="accordion-label">ACOUSTIC ENGINEERING</span>
+              <button class="accordion-plus">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-text">
+                <p>
+                  Our acoustic engineering division designs and implements
+                  sophisticated sound solutions.
+                </p>
+              </div>
+              <div class="accordion-3d">
+                <div class="wireframe-cube">
+                  <div class="face front"></div>
+                  <div class="face back"></div>
+                  <div class="face right"></div>
+                  <div class="face left"></div>
+                  <div class="face top"></div>
+                  <div class="face bottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Materiality Categories -->
+    <section class="materiality-section" id="materials">
+      <div class="materiality-header">
+        <span class="materiality-superscript">03</span>
+        <h2 class="materiality-title">MATERIALITY</h2>
+      </div>
+      <div class="materiality-categories">
+        <div class="materiality-item" data-material="oak">
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+            alt="Raw Oak"
+          />
+          <div class="materiality-overlay">
+            <h3>RAW OAK</h3>
+            <span>Natural grain textures</span>
+          </div>
+        </div>
+        <div class="materiality-item" data-material="marble">
+          <img
+            src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80"
+            alt="Honed Marble"
+          />
+          <div class="materiality-overlay">
+            <h3>HONED MARBLE</h3>
+            <span>Luxurious stone finish</span>
+          </div>
+        </div>
+        <div class="materiality-item" data-material="steel">
+          <img
+            src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=800&q=80"
+            alt="Perforated Steel"
+          />
+          <div class="materiality-overlay">
+            <h3>PERFORATED STEEL</h3>
+            <span>Industrial precision</span>
+          </div>
+        </div>
+        <div class="materiality-item" data-material="wood">
+          <img
+            src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&q=80"
+            alt="Charred Wood"
+          />
+          <div class="materiality-overlay">
+            <h3>CHARRED WOOD</h3>
+            <span>Ancient yakisugi technique</span>
+          </div>
+        </div>
+        <div class="materiality-item" data-material="aluminum">
+          <img
+            src="https://images.unsplash.com/photo-1621885701886-6c84d0dc2a38?w=800&q=80"
+            alt="Brushed Aluminum"
+          />
+          <div class="materiality-overlay">
+            <h3>BRUSHED ALUMINUM</h3>
+            <span>Modern metallic sheen</span>
+          </div>
+        </div>
+        <div class="materiality-item" data-material="concrete">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+            alt="Polished Concrete"
+          />
+          <div class="materiality-overlay">
+            <h3>POLISHED CONCRETE</h3>
+            <span>Smooth brutalist surface</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Monograph Journal -->
+    <section class="monograph-journal" id="journal">
+      <div class="journal-grid">
+        <div class="journal-quote">
+          <blockquote class="quote-text">
+            "Architecture is the learned game, correct and magnificent, of forms
+            assembled in light."
+          </blockquote>
+          <cite class="quote-cite">— Le Corbusier</cite>
+        </div>
+        <div class="journal-entries">
+          <article class="journal-entry" data-article="1">
+            <div class="entry-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&q=80"
+                alt=""
+              />
+            </div>
+            <div class="entry-meta">
+              <span class="entry-date">²⁵/⁰²/⁰²</span>
+              <h3 class="entry-title">The Evolution of Brutalism</h3>
+            </div>
+          </article>
+          <article class="journal-entry" data-article="2">
+            <div class="entry-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=300&q=80"
+                alt=""
+              />
+            </div>
+            <div class="entry-meta">
+              <span class="entry-date">¹⁸/⁰²/⁰²</span>
+              <h3 class="entry-title">Sustainable Materials 2024</h3>
+            </div>
+          </article>
+          <article class="journal-entry" data-article="3">
+            <div class="entry-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=300&q=80"
+                alt=""
+              />
+            </div>
+            <div class="entry-meta">
+              <span class="entry-date">⁰⁸/⁰²/⁰²</span>
+              <h3 class="entry-title">Acoustic Innovation in Design</h3>
+            </div>
+          </article>
+          <article class="journal-entry" data-article="4">
+            <div class="entry-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&q=80"
+                alt=""
+              />
+            </div>
+            <div class="entry-meta">
+              <span class="entry-date">⁰¹/⁰²/⁰²</span>
+              <h3 class="entry-title">The Future of Workspace</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Blueprint Footer -->
+    <footer class="blueprint-footer" id="contact">
+      <div class="footer-grid-lines">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+      </div>
+      <div class="footer-content">
+        <div class="footer-gps">
+          <span class="gps-label">STUDIO</span>
+          <span class="gps-coords">64.1265°N 21.8174°W</span>
+          <span class="gps-address">REYKJAVÍK, ICELAND</span>
+        </div>
+        <div class="footer-cta">
+          <h2 class="cta-text">LET'S BUILD</h2>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-link">[IG]</a>
+          <a href="#" class="social-link">[LI]</a>
+          <a href="#" class="social-link">[PI]</a>
+          <a href="#" class="social-link">[TW]</a>
+        </div>
+      </div>
+      <button class="back-to-top" id="backToTop">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </button>
+    </footer>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <a href="index.html" class="nav-item">INDEX</a>
+      <a href="projects.html" class="nav-item">WORKS</a>
+      <a href="methodology.html" class="nav-item">LAB</a>
+      <a href="contact.html" class="nav-item">CONTACT</a>
+    </nav>
+
+    <!-- GSAP & Lenis Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+      // Make structural columns clickable to redirect with category filter
+      document.addEventListener("DOMContentLoaded", function () {
+        const structuralCols = document.querySelectorAll(".structural-col");
+
+        structuralCols.forEach((col) => {
+          col.style.cursor = "pointer";
+
+          col.addEventListener("click", function (e) {
+            // Don't redirect if clicking on the plus button
+            if (e.target.closest(".structural-plus")) {
+              return;
+            }
+
+            const category = col.getAttribute("data-category");
+            if (category) {
+              window.location.href = "projects.html?category=" + category;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

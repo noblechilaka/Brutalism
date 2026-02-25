@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROJECTS | UNFORM</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/projects.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-headline: "Space Grotesk", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        --font-functional: "IBM Plex Mono", "Courier New", monospace;
+        --color-galvanized: #f2f2f2;
+        --color-ink: #0f0f0f;
+        --color-white: #ffffff;
+        --color-grey-light: #e5e5e5;
+        --color-grey-medium: #6b6b6b;
+        --color-grey-dark: #333333;
+        --color-blueprint: #1a2744;
+        --ease-luxury: cubic-bezier(0.76, 0, 0.24, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cursor Crosshair -->
+    <div class="crosshair crosshair-h"></div>
+    <div class="crosshair crosshair-v"></div>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+      <a href="index.html" class="nav-item">INDEX</a>
+      <a href="projects.html" class="nav-item active">WORKS</a>
+      <a href="methodology.html" class="nav-item">LAB</a>
+      <a href="contact.html" class="nav-item">CONTACT</a>
+    </nav>
+
+    <!-- Section 1: Title Block (Cover) -->
+    <section class="title-block" id="title">
+      <div class="title-divider" id="titleDivider"></div>
+
+      <!-- Left: Project Counter & Clock -->
+      <div class="title-left">
+        <div class="project-counter">
+          <span class="counter-label">TOTAL_PROJECTS</span>
+          <span class="counter-value" id="projectCount">052</span>
+        </div>
+        <div class="realtime-clock">
+          <span class="clock-label">STUDIO_TIME</span>
+          <span class="clock-value" id="studioClock">00:00:00</span>
+        </div>
+      </div>
+
+      <!-- Right: Massive Headline -->
+      <div class="title-right">
+        <h1 class="title-headline">
+          SELECTED<br />WORK<span class="title-cut">S</span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- Section 4: Dynamic Archive - Loaded from JSON -->
+    <section class="dynamic-archive" id="dynamicArchive">
+      <!-- Live Header -->
+      <div class="archive-header">
+        <div class="archive-counter">
+          <span class="counter-label">NUM:</span>
+          <span class="counter-value" id="archiveCount">052</span>
+        </div>
+        <div class="archive-title">
+          <h2>ARCHIVE</h2>
+        </div>
+      </div>
+
+      <!-- Dynamic Grid - Projects loaded from JSON -->
+      <div class="archive-grid" id="archiveGrid">
+        <!-- Projects will be dynamically inserted here -->
+      </div>
+    </section>
+
+    <!-- Section 2: Horizontal Blueprint Scroll -->
+    <section class="horizontal-blueprint" id="blueprint">
+      <div class="blueprint-container" id="blueprintContainer">
+        <!-- Project 01 -->
+        <article class="blueprint-project" data-project="01">
+          <div class="project-depth depth-foreground">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+                alt="The Concrete Pavilion"
+              />
+            </div>
+            <div class="project-label">
+              <span class="label-prefix">[P-01]</span>
+              <span class="label-name">THE CONCRETE PAVILION</span>
+              <svg class="label-line" width="60" height="1">
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="60"
+                  y2="0"
+                  stroke="currentColor"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="project-depth depth-background">
+            <div class="project-floorplan">
+              <svg viewBox="0 0 100 80" class="floorplan-svg">
+                <rect
+                  x="10"
+                  y="10"
+                  width="80"
+                  height="60"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.3"
+                />
+                <line
+                  x1="10"
+                  y1="30"
+                  x2="90"
+                  y2="30"
+                  stroke="currentColor"
+                  stroke-width="0.3"
+                />
+                <line
+                  x1="50"
+                  y1="10"
+                  x2="50"
+                  y2="70"
+                  stroke="currentColor"
+                  stroke-width="0.3"
+                />
+                <rect
+                  x="20"
+                  y="20"
+                  width="15"
+                  height="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.2"
+                />
+                <rect
+                  x="65"
+                  y="20"
+                  width="15"
+                  height="8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="0.2"
+                />
+              </svg>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 02 -->
+        <article class="blueprint-project" data-project="02">
+          <div class="project-depth depth-midground">
+            <div class="project-image horizontal">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+                alt="The Glass House"
+              />
+            </div>
+            <div class="project-label">
+              <span class="label-prefix">[P-02]</span>
+              <span class="label-name">THE GLASS HOUSE</span>
+              <svg class="label-line" width="60" height="1">
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="60"
+                  y2="0"
+                  stroke="currentColor"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 03 -->
+        <article class="blueprint-project" data-project="03">
+          <div class="project-depth depth-foreground">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                alt="The Library"
+              />
+            </div>
+            <div class="project-label">
+              <span class="label-prefix">[P-03]</span>
+              <span class="label-name">THE LIBRARY</span>
+              <svg class="label-line" width="60" height="1">
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="60"
+                  y2="0"
+                  stroke="currentColor"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 04 -->
+        <article class="blueprint-project" data-project="04">
+          <div class="project-depth depth-midground">
+            <div class="project-image horizontal">
+              <img
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80"
+                alt="The Brutalist Villa"
+              />
+            </div>
+            <div class="project-label">
+              <span class="label-prefix">[P-04]</span>
+              <span class="label-name">BRUTALIST VILLA</span>
+              <svg class="label-line" width="60" height="1">
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="60"
+                  y2="0"
+                  stroke="currentColor"
+                  stroke-width="0.5"
+                />
+              </svg>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 3: Technical Density Grid -->
+    <section class="technical-grid" id="archive">
+      <div class="grid-header">
+        <span class="grid-superscript">ARCHIVE</span>
+        <h2 class="grid-title">PROCESS</h2>
+      </div>
+
+      <div class="masonry-grid" id="masonryGrid">
+        <!-- Video Card -->
+        <div class="masonry-item item-video">
+          <div class="item-media">
+            <video autoplay muted loop playsinline>
+              <source
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+                type="video/mp4"
+                alt="video"
+              />
+            </video>
+          </div>
+          <div class="item-metadata">
+            <span>EXP: 1/500s</span>
+            <span>ISO: 800</span>
+            <span>LENS: 24mm</span>
+          </div>
+        </div>
+
+        <!-- Text Card -->
+        <div class="masonry-item item-text">
+          <div class="material-list">
+            <h3 class="list-title">MATERIAL SPECIFICATION</h3>
+            <ul class="materials">
+              <li>STEEL: Structural Beams</li>
+              <li>GLASS: Low-E Double Glazing</li>
+              <li>OAK: White French Lacquer</li>
+              <li>FELT: Autex Quietspace</li>
+              <li>CONCRETE: Poured In-Situ</li>
+            </ul>
+          </div>
+          <div class="item-metadata">
+            <span>TYPE: SPEC</span>
+            <span>REF: MAT-001</span>
+          </div>
+        </div>
+
+        <!-- Image Card -->
+        <div class="masonry-item item-image">
+          <div class="item-media">
+            <img
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80"
+              alt="Interior Detail"
+            />
+          </div>
+          <div class="item-metadata">
+            <span>EXP: 1/125s</span>
+            <span>ISO: 100</span>
+            <span>LENS: 35mm</span>
+          </div>
+        </div>
+
+        <!-- Image Card -->
+        <div class="masonry-item item-image">
+          <div class="item-media">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80"
+              alt="Exterior Detail"
+            />
+          </div>
+          <div class="item-metadata">
+            <span>EXP: 1/250s</span>
+            <span>ISO: 200</span>
+            <span>LENS: 50mm</span>
+          </div>
+        </div>
+
+        <!-- Text Card -->
+        <div class="masonry-item item-text">
+          <div class="specs-list">
+            <h3 class="list-title">ACOUSTIC PERFORMANCE</h3>
+            <ul class="specs">
+              <li>NRC: 0.85</li>
+              <li>STC: 55dB</li>
+              <li>RT60: 0.8s</li>
+            </ul>
+          </div>
+          <div class="item-metadata">
+            <span>TYPE: DATA</span>
+            <span>REF: ACO-001</span>
+          </div>
+        </div>
+
+        <!-- Image Card -->
+        <div class="masonry-item item-image">
+          <div class="item-media">
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80"
+              alt="Material Detail"
+            />
+          </div>
+          <div class="item-metadata">
+            <span>EXP: 1/60s</span>
+            <span>ISO: 400</span>
+            <span>LENS: 85mm</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Perspective Slider -->
+    <section class="perspective-slider" id="featured">
+      <div class="slider-header">
+        <span class="slider-superscript">PROJECT OF THE MONTH</span>
+        <h2 class="slider-title">04</h2>
+      </div>
+
+      <div class="slider-content">
+        <div class="slider-main" id="sliderMain">
+          <div class="slider-view view-photo active" data-view="photo">
+            <img
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80"
+              alt="Featured Project"
+            />
+          </div>
+          <div class="slider-view view-blueprint" data-view="blueprint">
+            <svg viewBox="0 0 100 60" class="blueprint-full">
+              <rect
+                x="5"
+                y="5"
+                width="90"
+                height="50"
+                fill="#1a2744"
+                stroke="white"
+                stroke-width="0.5"
+              />
+              <line
+                x1="5"
+                y1="30"
+                x2="95"
+                y2="30"
+                stroke="white"
+                stroke-width="0.5"
+              />
+              <line
+                x1="50"
+                y1="5"
+                x2="50"
+                y2="55"
+                stroke="white"
+                stroke-width="0.5"
+              />
+              <rect
+                x="10"
+                y="10"
+                width="25"
+                height="15"
+                fill="none"
+                stroke="white"
+                stroke-width="0.3"
+              />
+              <rect
+                x="65"
+                y="10"
+                width="25"
+                height="15"
+                fill="none"
+                stroke="white"
+                stroke-width="0.3"
+              />
+              <rect
+                x="10"
+                y="35"
+                width="20"
+                height="12"
+                fill="none"
+                stroke="white"
+                stroke-width="0.3"
+              />
+              <rect
+                x="70"
+                y="35"
+                width="20"
+                height="12"
+                fill="none"
+                stroke="white"
+                stroke-width="0.3"
+              />
+              <circle
+                cx="50"
+                cy="30"
+                r="8"
+                fill="none"
+                stroke="white"
+                stroke-width="0.3"
+              />
+            </svg>
+          </div>
+          <div class="slider-view view-model" data-view="model">
+            <div class="wireframe-container">
+              <div class="wireframe-model">
+                <div class="wf-face"></div>
+                <div class="wf-face"></div>
+                <div class="wf-face"></div>
+                <div class="wf-face"></div>
+                <div class="wf-face"></div>
+                <div class="wf-face"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-view view-light" data-view="light">
+            <div class="light-study">
+              <div class="light-source"></div>
+              <div class="light-shadow"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="view-btn active" data-view="photo">
+            <span class="view-num">01</span>
+            <span class="view-label">PHOTO</span>
+          </button>
+          <button class="view-btn" data-view="blueprint">
+            <span class="view-num">02</span>
+            <span class="view-label">BLUEPRINT</span>
+          </button>
+          <button class="view-btn" data-view="model">
+            <span class="view-num">03</span>
+            <span class="view-label">3D MODEL</span>
+          </button>
+          <button class="view-btn" data-view="light">
+            <span class="view-num">04</span>
+            <span class="view-label">LIGHT STUDY</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Directory (Footer Table) -->
+    <section class="directory-section" id="directory">
+      <div class="directory-header">
+        <span class="directory-superscript">INDEX</span>
+        <h2 class="directory-title">PROJECT DIRECTORY</h2>
+      </div>
+
+      <div class="directory-table">
+        <div class="table-header">
+          <span class="col-year">YEAR</span>
+          <span class="col-name">PROJECT NAME</span>
+          <span class="col-type">TYPOLOGY</span>
+          <span class="col-pdf">DOCUMENT</span>
+        </div>
+
+        <a href="#" class="table-row" data-project="01">
+          <span class="col-year">2024</span>
+          <span class="col-name">The Concrete Pavilion</span>
+          <span class="col-type">Residential</span>
+          <span class="col-pdf">[PDF]</span>
+        </a>
+
+        <a href="#" class="table-row" data-project="02">
+          <span class="col-year">2024</span>
+          <span class="col-name">The Glass House</span>
+          <span class="col-type">Commercial</span>
+          <span class="col-pdf">[PDF]</span>
+        </a>
+
+        <a href="#" class="table-row" data-project="03">
+          <span class="col-year">2023</span>
+          <span class="col-name">The Library</span>
+          <span class="col-type">Civic</span>
+          <span class="col-pdf">[PDF]</span>
+        </a>
+
+        <a href="#" class="table-row" data-project="04">
+          <span class="col-year">2023</span>
+          <span class="col-name">Brutalist Villa</span>
+          <span class="col-type">Residential</span>
+          <span class="col-pdf">[PDF]</span>
+        </a>
+
+        <a href="#" class="table-row" data-project="05">
+          <span class="col-year">2022</span>
+          <span class="col-name">Urban Housing Complex</span>
+          <span class="col-type">Residential</span>
+          <span class="col-pdf">[PDF]</span>
+        </a>
+
+        <a href="#" class="table-row" data-project="06">
+          <span class="col-year">2022</span>
+          <span class="col-name">Cultural Center</span>
+          <span class="col-type">Civic</span>
+          <span class="col-pdf">[PDF]</span>
+        </a>
+      </div>
+
+      <!-- Preview Thumbnail -->
+      <div class="preview-thumbnail" id="previewThumbnail">
+        <img src="" alt="" />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="blueprint-footer">
+      <div class="footer-grid-lines">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-gps">
+          <span class="gps-label">STUDIO</span>
+          <span class="gps-coords">64.1265°N 21.8174°W</span>
+          <span class="gps-address">REYKJAVÍK, ICELAND</span>
+        </div>
+
+        <div class="footer-cta">
+          <h2 class="cta-text">LET'S BUILD</h2>
+        </div>
+
+        <div class="footer-social">
+          <a href="#">[IG]</a>
+          <a href="#">[LI]</a>
+          <a href="#">[PI]</a>
+          <a href="#">[TW]</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+      <button class="modal-close" id="modalClose">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="modal-content">
+        <div class="modal-image">
+          <img src="" alt="" id="modalImage" />
+        </div>
+        <div class="modal-details">
+          <span class="modal-id" id="modalId">#01</span>
+          <h2 class="modal-title" id="modalTitle">PROJECT TITLE</h2>
+          <div class="modal-meta">
+            <div class="modal-meta-item">
+              <span class="modal-meta-label">CATEGORY</span>
+              <span class="modal-meta-value" id="modalCategory"
+                >Residential</span
+              >
+            </div>
+            <div class="modal-meta-item">
+              <span class="modal-meta-label">YEAR</span>
+              <span class="modal-meta-value" id="modalYear">2025</span>
+            </div>
+            <div class="modal-meta-item">
+              <span class="modal-meta-label">LOCATION</span>
+              <span class="modal-meta-value" id="modalLocation"
+                >Oslo, Norway</span
+              >
+            </div>
+          </div>
+          <div class="modal-tags" id="modalTags">
+            <!-- Tags will be populated dynamically -->
+          </div>
+          <div class="modal-description">
+            <p>
+              Experience the architectural vision of this exceptional project,
+              where design meets functionality in perfect harmony.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/projects.js"></script>
+  </body>
+</html>

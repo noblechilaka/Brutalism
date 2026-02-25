@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONTACT | UNFORM</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-headline: "Space Grotesk", -apple-system, BlinkMacSystemFont,
+          sans-serif;
+        --font-functional: "IBM Plex Mono", "Courier New", monospace;
+        --color-galvanized: #f2f2f2;
+        --color-ink: #0f0f0f;
+        --color-white: #ffffff;
+        --color-grey-light: #e5e5e5;
+        --color-grey-medium: #6b6b6b;
+        --color-grey-dark: #333333;
+        --ease-luxury: cubic-bezier(0.76, 0, 0.24, 1);
+        --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cursor Crosshair -->
+    <div class="crosshair crosshair-h"></div>
+    <div class="crosshair crosshair-v"></div>
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+      <a href="index.html" class="nav-item">INDEX</a>
+      <a href="projects.html" class="nav-item">WORKS</a>
+      <a href="methodology.html" class="nav-item">LAB</a>
+      <a href="#contact" class="nav-item active">CONTACT</a>
+    </nav>
+
+    <!-- Section 1: Monolith Header -->
+    <section class="monolith-header" id="hero">
+      <div class="vertical-divider"></div>
+      <div class="monolith-content">
+        <h1 class="monolith-title">
+          CONTACT<span class="monolith-sup">⁽⁰⁴⁾</span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- Section 2: Studio Network -->
+    <section class="studio-network" id="network">
+      <div class="studio-grid">
+        <!-- London HQ -->
+        <div class="studio-col" data-city="london">
+          <div class="studio-backdrop">
+            <img
+              src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=60"
+              alt="London Studio"
+              class="studio-image"
+            />
+          </div>
+          <div class="studio-info">
+            <span class="studio-label">01 / LONDON HQ</span>
+            <div class="studio-coords">51.5074° N, 0.1278° W</div>
+            <div class="studio-clock">
+              <span class="clock-label">LOCAL TIME</span>
+              <span class="clock-value" id="clock-london">--:--:--</span>
+            </div>
+            <div class="studio-address">
+              <p>42 Architectural Lane</p>
+              <p>London EC1V 9QR</p>
+              <a href="#" class="map-link">
+                <span>VIEW ON MAP</span>
+                <svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- New York -->
+        <div class="studio-col" data-city="newyork">
+          <div class="studio-backdrop">
+            <img
+              src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=60"
+              alt="New York Studio"
+              class="studio-image"
+            />
+          </div>
+          <div class="studio-info">
+            <span class="studio-label">02 / NEW YORK</span>
+            <div class="studio-coords">40.7128° N, 74.0060° W</div>
+            <div class="studio-clock">
+              <span class="clock-label">LOCAL TIME</span>
+              <span class="clock-value" id="clock-newyork">--:--:--</span>
+            </div>
+            <div class="studio-address">
+              <p>350 Fifth Avenue</p>
+              <p>New York, NY 10118</p>
+              <a href="#" class="map-link">
+                <span>VIEW ON MAP</span>
+                <svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Oslo -->
+        <div class="studio-col" data-city="oslo">
+          <div class="studio-backdrop">
+            <img
+              src="https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?w=800&q=60"
+              alt="Oslo Studio"
+              class="studio-image"
+            />
+          </div>
+          <div class="studio-info">
+            <span class="studio-label">03 / OSLO</span>
+            <div class="studio-coords">59.9139° N, 10.7522° E</div>
+            <div class="studio-clock">
+              <span class="clock-label">LOCAL TIME</span>
+              <span class="clock-value" id="clock-oslo">--:--:--</span>
+            </div>
+            <div class="studio-address">
+              <p>Akersgata 12</p>
+              <p>0158 Oslo</p>
+              <a href="#" class="map-link">
+                <span>VIEW ON MAP</span>
+                <svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Project Inquiry Form -->
+    <section class="project-inquiry" id="inquiry">
+      <div class="inquiry-grid">
+        <!-- Left: Editorial -->
+        <div class="inquiry-editorial">
+          <h2 class="editorial-title">START A CONVERSATION</h2>
+          <p class="editorial-text">
+            We are currently accepting commissions for 2026/27. Tell us about
+            your site, your vision, and your timeline. Every great project
+            begins with a single question.
+          </p>
+          <div class="editorial-meta">
+            <span>AVERAGE RESPONSE</span>
+            <span class="meta-value">48 HOURS</span>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="inquiry-form-wrap">
+          <div class="form-progress-line">
+            <div class="form-progress-fill" id="formProgress"></div>
+          </div>
+
+          <form class="inquiry-form" id="contactForm">
+            <div class="form-field">
+              <label class="field-label" for="name">NAME</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="field-input"
+                required
+              />
+              <div class="field-line"></div>
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="email">EMAIL</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="field-input"
+                required
+              />
+              <div class="field-line"></div>
+            </div>
+
+            <div class="form-field">
+              <label class="field-label">PROJECT TYPE</label>
+              <div class="pill-tags">
+                <button type="button" class="pill-tag" data-value="residential">
+                  RESIDENTIAL
+                </button>
+                <button type="button" class="pill-tag" data-value="commercial">
+                  COMMERCIAL
+                </button>
+                <button type="button" class="pill-tag" data-value="cultural">
+                  CULTURAL
+                </button>
+                <button type="button" class="pill-tag" data-value="interior">
+                  INTERIOR ONLY
+                </button>
+              </div>
+              <input
+                type="hidden"
+                id="projectType"
+                name="projectType"
+                value=""
+              />
+              <div class="field-line"></div>
+            </div>
+
+            <div class="form-field">
+              <label class="field-label" for="budget">BUDGET RANGE</label>
+              <select id="budget" name="budget" class="field-select">
+                <option value="">SELECT RANGE</option>
+                <option value="500k-1m">£500K - £1M</option>
+                <option value="1m-3m">£1M - £3M</option>
+                <option value="3m-5m">£3M - £5M</option>
+                <option value="5m+">£5M+</option>
+              </select>
+              <div class="field-line"></div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span class="btn-text">TRANSMIT BRIEF</span>
+              <div class="btn-loading">
+                <svg class="floorplan-loader" viewBox="0 0 100 60">
+                  <line class="draw-line" x1="10" y1="10" x2="10" y2="10" />
+                  <line class="draw-line" x1="10" y1="10" x2="90" y2="10" />
+                  <line class="draw-line" x1="90" y1="10" x2="90" y2="50" />
+                  <line class="draw-line" x1="90" y1="50" x2="10" y2="50" />
+                  <line class="draw-line" x1="10" y1="50" x2="10" y2="10" />
+                  <line class="draw-line" x1="50" y1="10" x2="50" y2="50" />
+                </svg>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Section 4: Direct Channels -->
+      <div class="direct-channels">
+        <div class="channel-item">
+          <span class="channel-label">GENERAL INQUIRIES</span>
+          <a
+            href="mailto:hello@studio-unform.com"
+            class="channel-link"
+            data-email="hello@studio-unform.com"
+          >
+            <span class="channel-email">hello@studio-unform.com</span>
+            <span class="channel-action">COPY TO CLIPBOARD</span>
+          </a>
+        </div>
+        <div class="channel-item">
+          <span class="channel-label">PRESS / MEDIA</span>
+          <a
+            href="mailto:press@studio-unform.com"
+            class="channel-link"
+            data-email="press@studio-unform.com"
+          >
+            <span class="channel-email">press@studio-unform.com</span>
+            <span class="channel-action">COPY TO CLIPBOARD</span>
+          </a>
+        </div>
+        <div class="channel-item">
+          <span class="channel-label">CAREERS</span>
+          <a
+            href="mailto:join@studio-unform.com"
+            class="channel-link"
+            data-email="join@studio-unform.com"
+          >
+            <span class="channel-email">join@studio-unform.com</span>
+            <span class="channel-action">COPY TO CLIPBOARD</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: New Business Footer -->
+    <footer class="new-business-footer" id="contact">
+      <div class="footer-grid-lines">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+      </div>
+      <div class="footer-content">
+        <div class="footer-question">
+          <h2 class="question-text">WHAT ARE WE<br />BUILDING?</h2>
+        </div>
+        <div class="footer-action">
+          <button class="schedule-btn" id="scheduleBtn">
+            <span class="btn-label">SCHEDULE A CALL</span>
+            <div class="btn-magnetic"></div>
+          </button>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-abbr">[IG]</a>
+          <a href="#" class="social-abbr">[LI]</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Success Overlay -->
+    <div class="success-overlay" id="successOverlay">
+      <div class="success-content">
+        <p class="success-text">
+          Brief Received.<br />We will respond within 48 hours.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
