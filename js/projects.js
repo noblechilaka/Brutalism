@@ -1,4 +1,4 @@
-it/**
+/**
  * UNFORM - Projects Page
  * Interactive functionality for projects page
  */
@@ -278,7 +278,7 @@ function initLenis() {
 }
 
 /**
- * GSAP Animations
+ * GSAP Animations - Title uses same entrance animation as index.html headline
  */
 function initAnimations() {
   if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined")
@@ -298,14 +298,7 @@ function initAnimations() {
       delay: 0.3,
     });
 
-gsap.from(".title-headline", {
-      y: 60,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power4.out",
-      delay: 0.3,
-    });
-  }
+    // Headline entrance animation - scale from bottom (original)
     gsap.from(".title-headline", {
       scaleY: 0,
       transformOrigin: "bottom",
@@ -377,7 +370,7 @@ gsap.from(".title-headline", {
       },
     });
   }
-
+}
 
 // Export for debugging
 window.projectsJS = {
@@ -406,51 +399,55 @@ function initDynamicArchive() {
     .then((projects) => {
       // Get category filter from URL parameter
       const urlParams = new URLSearchParams(window.location.search);
-      const categoryFilter = urlParams.get('category');
-      
+      const categoryFilter = urlParams.get("category");
+
       // Map URL category values to JSON category values
       const categoryMap = {
-        'residential': 'Residential',
-        'commercial': 'Commercial',
-        'cultural': 'Cultural',
-        'mixed-use': 'Mixed-Use'
+        residential: "Residential",
+        commercial: "Commercial",
+        cultural: "Cultural",
+        "mixed-use": "Mixed-Use",
       };
-      
+
       let filteredProjects = projects;
       let activeCategory = null;
-      
+
       // Apply filter if category parameter exists
       if (categoryFilter && categoryMap[categoryFilter]) {
         activeCategory = categoryMap[categoryFilter];
-        filteredProjects = projects.filter(project => 
-          project.category.toLowerCase() === activeCategory.toLowerCase()
+        filteredProjects = projects.filter(
+          (project) =>
+            project.category.toLowerCase() === activeCategory.toLowerCase()
         );
-        
+
         // Update archive counter to show filtered count
         if (archiveCount) {
-          const count = String(filteredProjects.length).padStart(3, '0');
-          archiveCount.textContent = count;
-        }
-        
-        // Also update title block counter
-        const titleCount = document.getElementById("projectCount");
-        if (titleCount) {
-          titleCount.textContent = String(filteredProjects.length).padStart(3, '0');
-        }
-        
-        // Show active filter indicator
-        showActiveFilter(activeCategory);
-      } else {
-        // No filter - show all projects
-        if (archiveCount) {
-          const count = String(projects.length).padStart(3, '0');
+          const count = String(filteredProjects.length).padStart(3, "0");
           archiveCount.textContent = count;
         }
 
         // Also update title block counter
         const titleCount = document.getElementById("projectCount");
         if (titleCount) {
-          titleCount.textContent = String(projects.length).padStart(3, '0');
+          titleCount.textContent = String(filteredProjects.length).padStart(
+            3,
+            "0"
+          );
+        }
+
+        // Show active filter indicator
+        showActiveFilter(activeCategory);
+      } else {
+        // No filter - show all projects
+        if (archiveCount) {
+          const count = String(projects.length).padStart(3, "0");
+          archiveCount.textContent = count;
+        }
+
+        // Also update title block counter
+        const titleCount = document.getElementById("projectCount");
+        if (titleCount) {
+          titleCount.textContent = String(projects.length).padStart(3, "0");
         }
       }
 
@@ -480,24 +477,24 @@ function initDynamicArchive() {
  * Show active filter indicator in the archive header
  */
 function showActiveFilter(category) {
-  const archiveHeader = document.querySelector('.archive-header');
+  const archiveHeader = document.querySelector(".archive-header");
   if (!archiveHeader) return;
-  
+
   // Remove existing filter indicator if any
-  const existingIndicator = archiveHeader.querySelector('.active-filter');
+  const existingIndicator = archiveHeader.querySelector(".active-filter");
   if (existingIndicator) {
     existingIndicator.remove();
   }
-  
+
   // Create filter indicator
-  const filterIndicator = document.createElement('div');
-  filterIndicator.className = 'active-filter';
+  const filterIndicator = document.createElement("div");
+  filterIndicator.className = "active-filter";
   filterIndicator.innerHTML = `
     <span class="filter-label">FILTER:</span>
     <span class="filter-value">${category.toUpperCase()}</span>
     <button class="filter-clear" onclick="clearFilter()">[CLEAR]</button>
   `;
-  
+
   archiveHeader.appendChild(filterIndicator);
 }
 
@@ -507,7 +504,7 @@ function showActiveFilter(category) {
 function clearFilter() {
   // Remove query parameter and reload
   const url = new URL(window.location);
-  url.searchParams.delete('category');
+  url.searchParams.delete("category");
   window.location.href = url.toString();
 }
 

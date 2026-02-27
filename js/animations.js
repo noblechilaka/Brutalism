@@ -60,23 +60,10 @@ function initHeroAnimations() {
   const hero = document.querySelector(".hero-plate");
   if (!hero) return;
 
-  // Headline entrance animation - plays on page load
+  // Headline weight scroll effect - letter-spacing tightens on scroll
   const headline = document.querySelector(".hero-headline");
 
   if (headline) {
-    // Set initial state
-    gsap.set(headline, { y: 60, opacity: 0 });
-
-    // Entrance animation - plays immediately on load
-    gsap.to(headline, {
-      y: 0,
-      opacity: 1,
-      duration: 1.2,
-      ease: "power4.out",
-      delay: 0.3, // Slight delay for dramatic effect
-    });
-
-    // Headline weight scroll effect - letter-spacing tightens on scroll
     gsap.to(headline, {
       letterSpacing: "-0.08em",
       ease: "none",
@@ -89,23 +76,10 @@ function initHeroAnimations() {
     });
   }
 
-  // Hero video parallax + entrance animation
+  // Hero video parallax
   const videoWrap = document.querySelector(".hero-video");
 
   if (videoWrap) {
-    // Set initial state
-    gsap.set(videoWrap, { y: 40, opacity: 0 });
-    
-    // Entrance animation
-    gsap.to(videoWrap, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      ease: "power4.out",
-      delay: 0.5,
-    });
-
-    // Parallax scroll effect
     gsap.to(videoWrap, {
       yPercent: -20,
       ease: "none",
@@ -115,20 +89,6 @@ function initHeroAnimations() {
         end: "bottom top",
         scrub: 1,
       },
-    });
-  }
-
-  // Hero superscript entrance animation
-  const superscript = document.querySelector(".hero-superscript");
-
-  if (superscript) {
-    gsap.set(superscript, { opacity: 0 });
-    
-    gsap.to(superscript, {
-      opacity: 1,
-      duration: 0.8,
-      ease: "power2.out",
-      delay: 0.8,
     });
   }
 }
