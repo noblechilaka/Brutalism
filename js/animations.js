@@ -76,6 +76,26 @@ function initHeroAnimations() {
     });
   }
 
+  //  const cta = document.querySelector(".cta-text");
+
+   if (headline) {
+     gsap.fromTo(
+       headline,
+       { scaleY: 0, opacity: 0 },
+       {
+         scaleY: 1,
+         opacity: 1,
+         duration: 1.2,
+         ease: "power4.out",
+         scrollTrigger: {
+           trigger: hero,
+           start: "top 70%",
+           toggleActions: "play none none reverse",
+         },
+       }
+     );
+   }
+
   // Hero video parallax
   const videoWrap = document.querySelector(".hero-video");
 
