@@ -501,5 +501,8 @@
 
   .gauge-value {
     font-size: 36px;
+    position: absolute;
+    right: 46px;
+    bottom: 56px;
   }
 }
