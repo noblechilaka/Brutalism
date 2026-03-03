@@ -2,6 +2,133 @@
    AUTEX DNA - VISUAL DESIGN SYSTEM
    ===================================================== */
 
+/* =====================================================
+   TECHNICAL PLOTTER PRELOADER
+   ===================================================== */
+body.preloader-active {
+  overflow: hidden !important;
+}
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Shutter layers for the fracture exit */
+.preloader-shutter {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: var(--bg-color);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.preloader-shutter.top {
+  top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.preloader-shutter.bottom {
+  bottom: 0;
+}
+
+/* Container for the split effect */
+.preloader-content {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Base wireframe text that stays behind */
+.preloader-wireframe {
+  font-family: var(--font-headline);
+  font-size: clamp(60px, 15vw, 280px);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(15, 15, 15, 0.08);
+  user-select: none;
+}
+
+/* The two halves for fracture effect */
+
+.preloader-half {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+/* Top half shows 0-50% */
+.preloader-half.top-half {
+  clip-path: inset(0 0 50% 0);
+}
+
+/* Bottom half shows 50-100% */
+.preloader-half.bottom-half {
+  clip-path: inset(50% 0 0 0);
+}
+
+.preloader-fill {
+  font-family: var(--font-headline);
+  font-size: clamp(60px, 15vw, 280px);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  border-right: 2px solid var(--blueprint-cyan);
+  user-select: none;
+}
+
+/* Counter HUD - Pinned to the Plotter edge */
+.preloader-counter {
+  position: absolute;
+  bottom: -35px;
+  right: 0;
+  font-family: var(--font-functional);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--blueprint-cyan);
+  white-space: nowrap;
+}
+
+/* Exit state - shutters move away */
+#preloader.exit .preloader-shutter.top {
+  transform: translateY(-100%);
+}
+
+#preloader.exit .preloader-shutter.bottom {
+  transform: translateY(100%);
+}
+
+/* Fade out wireframe during exit */
+#preloader.exit .preloader-wireframe {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* =====================================================
+   AUTEX DNA - VISUAL DESIGN SYSTEM
+   ===================================================== */
+
 :root {
   /* LIGHT MODE (Default) */
   --color-galvanized: #f2f2f2;

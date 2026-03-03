@@ -1,51 +1,27 @@
-# Preloader Implementation Plan
+# UNFORM Technical Plotter Preloader - Implementation
 
-## Information Gathered:
+## Task: Implement "The Technical Plotter" preloader with "Horizontal Fracture" exit animation
 
-- **Project**: UNFORM Architectural Studio website
-- **Current Tech Stack**: HTML, CSS (custom properties), GSAP, Lenis smooth scroll
-- **Design System**:
-  - Paper White: #F9F9F7 (background)
-  - Ink Black: #0F0F0F (text)
-  - Font: Space Grotesk (headlines), IBM Plex Mono (functional)
-- **Animation**: GSAP already in use
+### Steps:
+- [x] 1. Add preloader CSS styles to styles/styles.css
+- [x] 2. Add preloader HTML structure to index.html
+- [x] 3. Add preloader GSAP animation to js/animations.js
+- [x] 4. Test and verify the animation works correctly
 
-## Implementation Status: ✅ COMPLETE
+### Design Specifications:
+- **The Skeleton (0%)**: Word "UNFORM" appears as faint 1px wireframe outline (blueprint style)
+- **The Inking (0% → 100%)**: Vertical Blue Scan Line moves left to right, turning letters solid Ink Black
+- **The Sync**: Percentage counter pinned to bottom of Blue Scan Line, traveling with it
+- **Exit Animation**: 
+  - Blue Scan Line vanishes at 100%
+  - 1px horizontal fracture line strikes through center
+  - Top half slides UP, bottom half slides DOWN
+  - Letters stay attached to their halves (word "rips" in half)
+  - Reveals homepage hero section
 
-### 1. HTML Structure (index.html) - ✅ DONE
+### Technical Details:
+- Font: Space Grotesk (existing)
+- Colors: #f9f9f7 (bg), #0f0f0f (ink), #0041FF (accent/blueprint cyan)
+- Duration: ~3.5s for fill, ~1.2s for exit fracture
+- GSAP timeline for smooth sync animation
 
-- Preloader container with split design (top/bottom)
-- 12-column background grid
-- UNFORM logo with SVG paths (wireframe outline + fill)
-- Scanner line with glow effect
-- Progress counter (bottom-right)
-- Corner metadata elements (SCANNING_ASSETS, GPS coords, GRID status)
-
-### 2. CSS Styles (styles/styles.css) - ✅ DONE
-
-- Preloader overlay (fixed, z-index: 99999)
-- 12-column grid with 1px lines
-- Logo animations: stroke-dasharray for wireframe effect, clip-path for fill reveal
-- Scanner line animation synced to timing
-- Flickering metadata text animation
-- Grid split exit animation (top slides up, bottom slides down)
-- Added --ease-weighted: cubic-bezier(0.85, 0, 0.15, 1)
-
-### 3. JavaScript (js/scripts.js) - ✅ DONE
-
-- initPreloader() function
-- Progress counter: 0.00% → 100.00% over 2.2 seconds
-- Scanner line animation synced to progress
-- Logo fill effect using CSS clip-path
-- GeoIP fetch for user coordinates (ipapi.co)
-- Corner metadata updates during load
-- Grid split exit at 100% completion
-- Hero animation trigger after preloader
-
-## Followup Steps:
-
-- Test preloader on page load
-- Verify grid split animation works smoothly
-- Check GeoIP functionality (may need CORS proxy in some environments)
-- Ensure fonts load correctly
-- Test with slow network to see loading behavior

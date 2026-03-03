@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAccordionAnimations();
   initSliderAnimations();
   initFooterAnimations();
+  initPreloader();
 });
 
 /**
@@ -63,54 +64,66 @@ function initHeroAnimations() {
   // Headline weight scroll effect - letter-spacing tightens on scroll
   const headline = document.querySelector(".hero-headline");
 
+  // Set initial state - hidden until preloader completes
   if (headline) {
-    gsap.to(headline, {
-      letterSpacing: "-0.08em",
-      ease: "none",
-      scrollTrigger: {
-        trigger: hero,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-      },
-    });
+    gsap.set(headline, { scaleY: 0, opacity: 0 });
   }
-
-  //  const cta = document.querySelector(".cta-text");
-
-   if (headline) {
-     gsap.fromTo(
-       headline,
-       { scaleY: 0, opacity: 0 },
-       {
-         scaleY: 1,
-         opacity: 1,
-         duration: 1.2,
-         ease: "power4.out",
-         scrollTrigger: {
-           trigger: hero,
-           start: "top 70%",
-           toggleActions: "play none none reverse",
-         },
-       }
-     );
-   }
-
-  // Hero video parallax
+  
   const videoWrap = document.querySelector(".hero-video");
-
   if (videoWrap) {
-    gsap.to(videoWrap, {
-      yPercent: -20,
-      ease: "none",
-      scrollTrigger: {
-        trigger: hero,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-      },
-    });
+    gsap.set(videoWrap, { opacity: 0 });
   }
+
+  // Listen for preloader complete event
+  function startHeroAnimations() {
+    // Remove the event listener to prevent duplicate triggers
+    window.removeEventListener('preloaderComplete', startHeroAnimations);
+    
+    // Animate headline reveal
+    if (headline) {
+      gsap.to(headline, {
+        scaleY: 1,
+        opacity: 1,
+        duration: 1.2,
+        ease: "power4.out"
+      });
+      
+      // Add scroll effect after intro animation
+      gsap.to(headline, {
+        letterSpacing: "-0.08em",
+        ease: "none",
+        scrollTrigger: {
+          trigger: hero,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }
+
+    // Hero video parallax
+    if (videoWrap) {
+      gsap.to(videoWrap, {
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out"
+      });
+      
+      gsap.to(videoWrap, {
+        yPercent: -20,
+        ease: "none",
+        scrollTrigger: {
+          trigger: hero,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }
+  }
+
+  // Start hero animations when preloader completes
+  window.addEventListener('preloaderComplete', startHeroAnimations);
 }
 
 /**
@@ -504,4 +517,138 @@ window.gsapAnimations = {
   initAccordionAnimations,
   initSliderAnimations,
   initFooterAnimations,
+  initPreloader,
 };
+
+/**
+ * Technical Plotter Preloader - "The Horizontal Fracture"
+ * Wireframe → Ink Fill → Horizontal Split Exit
+ */
+function initPreloader() {
+  const preloader = document.getElementById("preloader");
+  if (!preloader) return;
+
+  // Prevent scrolling during preloader
+  document.body.classList.add("preloader-active");
+
+  // Stop Lenis during preloader
+  if (window.lenis) {
+    window.lenis.stop();
+  }
+
+  const fillElements = document.querySelectorAll(".preloader-fill");
+  const counter = document.getElementById("preload-pct");
+  const mainContent = document.querySelector(".hero-plate");
+
+  if (!fillElements.length || !counter) return;
+
+  // Set initial state
+  gsap.set(fillElements, { width: "0%" });
+
+  // Create the timeline
+  const tl = gsap.timeline({
+    onComplete: () => {
+      // Trigger the exit animation
+      preloader.classList.add("exit");
+
+      // Fade out preloader after exit animation
+      setTimeout(() => {
+        gsap.to(preloader, {
+          opacity: 0,
+          duration: 0.4,
+          onComplete: () => {
+            preloader.style.display = "none";
+            // Re-enable scrolling
+            document.body.classList.remove("preloader-active");
+            if (window.lenis) {
+              window.lenis.start();
+            }
+            // Dispatch event to signal preloader is done - trigger hero animations
+            window.dispatchEvent(new CustomEvent("preloaderComplete"));
+          },
+        });
+      }, 1200);
+    },
+  });
+
+  // THE INKING: Blue Scan Line fills from left to right
+  tl.to(fillElements, {
+    width: "100%",
+    duration: 3.5,
+    ease: "power3.inOut",
+    onUpdate: function () {
+      // Sync counter with scan line
+      const prog = (this.progress() * 100).toFixed(2);
+      counter.innerText = prog + "%";
+    },
+  });
+
+  // Brief pause at 100%
+  tl.to({}, { duration: 0.4 });
+
+  // THE FRACTURE EXIT: Horizontal split
+  // Top half moves UP
+  const topHalf = document.querySelector(".preloader-half.top-half");
+  const bottomHalf = document.querySelector(".preloader-half.bottom-half");
+  const topShutter = document.querySelector(".preloader-shutter.top");
+  const bottomShutter = document.querySelector(".preloader-shutter.bottom");
+  const wireframe = document.querySelector(".preloader-wireframe");
+
+  if (topHalf && bottomHalf) {
+    // Animate the text halves moving apart
+    tl.to(
+      topHalf,
+      {
+        y: "-100%",
+        duration: 1.2,
+        ease: "expo.inOut",
+      },
+      "fracture"
+    );
+
+    tl.to(
+      bottomHalf,
+      {
+        y: "100%",
+        duration: 1.2,
+        ease: "expo.inOut",
+      },
+      "fracture"
+    );
+
+    // Animate shutters
+    if (topShutter && bottomShutter) {
+      tl.to(
+        topShutter,
+        {
+          y: "-100%",
+          duration: 1.2,
+          ease: "expo.inOut",
+        },
+        "fracture"
+      );
+
+      tl.to(
+        bottomShutter,
+        {
+          y: "100%",
+          duration: 1.2,
+          ease: "expo.inOut",
+        },
+        "fracture"
+      );
+    }
+
+    // Fade out wireframe
+    if (wireframe) {
+      tl.to(
+        wireframe,
+        {
+          opacity: 0,
+          duration: 0.4,
+        },
+        "fracture"
+      );
+    }
+  }
+}
